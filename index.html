@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normolize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__header-logo" src="IMG/mishka-logo-desktop.svg" width="149" height="72" alt="Mishka - магазин товаров ручной работы">
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
+      <img class="page-header__header-logo main-nav__logo" src="IMG/mishka-logo-desktop.svg" width="149" height="72" alt="Mishka - магазин товаров ручной работы">
+      <!-- Здесь где-то кнопка закрыть меню -->
       <button class="main-nav__toogle"  type="button">Открыть меню</button>
         <div class="main-nav__wraper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="№">Каталог товаров</a>
+              <a href="catalog.html">Каталог товаров</a>
              </li>
              <li class="site-list__item">
               <a href="knitting.html">Вязание на заказ</a>
@@ -55,8 +56,8 @@
 
     <main class="page-main">
       <section class="product">
-        <h1 class="product__name">Вязанные корзинки</h1>
-        <h2 class="product__status">Товар недели</h2>
+        <h2 class="product__name">Вязанные корзинки</h2>
+        <h3 class="product__status">Товар недели</h3>
         <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
         <table class="product__features-table">
           <tr>
@@ -74,9 +75,10 @@
         </table>
         <p class="product__price">Цена: 990 руб.</p>
         <button class="product__order-button button" type="button">Заказать</button>
+        <img class="product__photo" src="img/triple-set-desktop.jpg" width="525" height="636" alt="Фото корзинок в трёх вариантах размера">
       </section>
       <section class="about-us">
-        <h1  class="about-us__title">Коротко о нас:</h1>
+        <h2  class="about-us__title">Коротко о нас:</h2>
         <div class="about-us__wraper">
           <ul class="about-us__list">
             <li class="about-us__item about-us__item--eco">Экологически чистые материалы</li>
@@ -90,7 +92,7 @@
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
-          <h1 class="reviews__title">Отзывы</h1>
+          <h2 class="reviews__title">Отзывы</h2>
           <button class="reviews__button button" type="button">Написать</button>
           <!-- здесь должен быть слайдер -->
           <div class="reviews__list slider__list">
@@ -99,16 +101,16 @@
               такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и
               игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <cite class="reviews__autor">
-                <p class="reviews__username">Анастасия Красильникова</p>
-                <p class="reviews__user-nickname">@misssssiskras</p>
+                <span class="reviews__username">Анастасия Красильникова</span>
+                <span class="reviews__user-nickname">@misssssiskras</span>
               </cite>
             </blockquote>
             <blockquote class="reviews__item slider__item">
               <p class="reviews__text">Мне просто нарвятся красивые и удобные вещи. А ещё мне нужно как-то
               заполнить блок цитат отзывов, чтобы проверить, как тут всё работает.</p>
               <cite class="reviews__autor">
-                <p class="reviews__username">Марина Васильевна</p>
-                <p class="reviews__user-nickname">@marifox</p>
+                <span class="reviews__username">Марина Васильевна</span>
+                <span class="reviews__user-nickname">@marifox</span>
               </cite>
             </blockquote>
             <p class="reviews__toogles slider_toogles">
@@ -120,7 +122,7 @@
         </div>
       </section>
       <section class="contacts">
-        <h1 class="contacts__title">Контакты</h1>
+        <h2 class="contacts__title">Контакты</h2>
         <table class="contacts__list">
           <tr>
             <td class="contacts__item">e-mail</td>
@@ -128,7 +130,7 @@
           </tr>
           <tr>
             <td class="contacts__item">адрес</td>
-            <td class="contacts__item">г. Санкт-Петербург, ул. Большая Конюшенная, д 19/8, офис 101</td>
+            <td class="contacts__item">г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д 19/8, офис 101</td>
           </tr>
         </table>
         <!-- Тут должна быть карта -->
@@ -158,7 +160,7 @@
     </footer>
 
     <div class="modal modal--bying">
-      <h1 class="modal__title">Добавить в корзину</h1>
+      <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <div class="modal__buttons">
         <button class="modal__button button" type="button">S</button>

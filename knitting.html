@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="style.css">
 	  <meta charset="utf-8">
 	  <title>Mishka</title>
+	  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normolize.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
     <header class="page-header">
@@ -15,7 +19,7 @@
         <div class="main-nav__wraper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="№">Каталог товаров</a>
+              <a href="catalog.html">Каталог товаров</a>
              </li>
              <li class="site-list__item site-list__item--choosen">
               <a href="knitting.html">Вязание на заказ</a>
@@ -45,6 +49,7 @@
     </header>
 
     <main class="page-knitting">
+      <h1 class="visually-hidden">Форма заказа</h1>
       <p class="page-knitting__text">Мы будем рады воплотить в жизнь ваши пожелания!
       Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="page-knitting__form form" action="mailto:m777553@ya.ru" enctype="text/plain">
@@ -102,7 +107,7 @@
         <fieldset class="form__part form__part--white">
           <legend class="form__title">ДОП</legend>
           <label class="form__lable visualy-hidden">Опишите все ваши пожелания к заказу
-            <input type="textarea" name="addition" placeholder="Опишите все ваши пожелания к заказу">
+            <textarea name="addition" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </label>
         </fieldset>
         <input type="submit" value="Отправить заказ">
