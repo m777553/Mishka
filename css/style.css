@@ -1,6 +1,5 @@
-@import "normolize.css";
 body {
-  min-width: 3200px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   font-size: 17px;
@@ -10,10 +9,52 @@ body {
   font-style: normal;
   background-color: #ffffff;
 }
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 img {
   max-width: 100%;
   height: auto;
 }
-main {
-  background: #555555;
+.main-nav {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background: transparent;
+  width: 320px;
+  margin: 0 auto;
+}
+.main-nav::before {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+  .main-nav__wraper {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1150px) {
+  .desktop-list {
+    height: auto;
+    overflow: auto;
+  }
+}
+.default-nole {
+  padding: 0;
+  margin: 0;
 }

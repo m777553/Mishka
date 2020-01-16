@@ -1,0 +1,45 @@
+.main-nav{
+  .default-nole;
+  .no-outline;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+// этот элемент надо скрыть для всего кроме десктопа
+// .descktop-list {
+  // height: 0;
+  // overflow: hidden;
+// }
+
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+	width: auto;
+	margin: 0;
+  }
+  .main-nav__wraper {
+	display: flex;
+	justify-content: space-between;
+	width: @tablet-width;
+	margin: 0 auto;
+  }
+
+}
+
+
+@media (min-width: @desktop-width) {
+
+  // .main-nav {
+    // background: #121212;
+  // }
+
+
+// здесь нужно будет показать скрытый элемент
+  .desktop-list {
+      height: auto;
+      overflow: auto;
+
+
+  }
+}
