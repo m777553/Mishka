@@ -1,0 +1,56 @@
+.page-header {
+	display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0 auto;
+
+  border: 2px solid red;
+}
+
+.page-header__header-logo {
+  /* height: 80px; */
+  display: block;
+  margin: 0 auto;
+
+
+
+}
+
+.page-header__nav{
+  width: 100%;
+
+
+  border: 2px solid blue;
+
+}
+.page-header__cover {
+  width: 100%;
+  min-height: 373px;
+  background: @bg-gray url("../less/blocks/page-header/hero-mobile.jpg") center no-repeat;
+
+  border: 2px solid green;
+}
+.page-header__image-wrap {
+  width: 100%;
+
+  /* flex-grow: 1; */
+  border: 2px solid yellow;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    wrap: wrap;
+  }
+
+
+  .page-header__cover {
+  height: 746px;
+  width: 768px;
+  background-image: url("../less/blocks/page-header/hero-tablet.jpg");
+
+  }
+
+}

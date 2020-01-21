@@ -7,22 +7,32 @@
 }
 
 // этот элемент надо скрыть для всего кроме десктопа
-// .descktop-list {
-  // height: 0;
-  // overflow: hidden;
-// }
+.descktop-list {
+  display: none;
+ }
+
+ .main-nav__wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+.main-nav__toogle {
+  display: none;
+}
 
 
 @media (min-width: @tablet-width) {
   .main-nav {
-	width: auto;
-	margin: 0;
+    width: auto;
+    margin: 0;
   }
   .main-nav__wraper {
-	display: flex;
-	justify-content: space-between;
-	width: @tablet-width;
-	margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: @tablet-width;
+    margin: 0 auto;
   }
 
 }
@@ -36,9 +46,8 @@
 
 
 // здесь нужно будет показать скрытый элемент
-  .desktop-list {
-      height: auto;
-      overflow: auto;
+  .descktop-list {
+	display: block;
 
 
   }
