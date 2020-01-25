@@ -64,22 +64,28 @@
 @media (min-width: @tablet-width) {
   .page-header {
     /* flex-direction: row; */
-    wrap: wrap;
+    flex-wrap: wrap;
   }
 .page-header__image-wrap {
   width: 145px;
   height: 90px;
 
   position: absolute;
-  left: 0;
-  top: 20px;
+  left: 50px;
+  top: 17px;
 }
 
   .page-header__cover {
   height: 746px;
-  width: 768px;
+  width: 100%;
   background-image: url("../less/blocks/page-header/hero-tablet.jpg");
 
+  }
+  .header-cover__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: 495px;
+    margin-top: 160px;
   }
 
 }

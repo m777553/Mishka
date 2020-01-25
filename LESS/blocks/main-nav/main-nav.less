@@ -6,10 +6,8 @@
   margin: 0 auto;
 }
 
-// этот элемент надо скрыть для всего кроме десктопа
-.descktop-list {
-  display: none;
- }
+/* этот элемент надо скрыть для всего кроме десктопа */
+
 
  .main-nav__wraper {
     display: flex;
@@ -21,9 +19,14 @@
 .main-nav__toogle {
   display: none;
 }
-
+.main-nav__list {
+  &--descktop-list {
+  display: none;
+ }
+}
 
 @media (min-width: @tablet-width) {
+
   .main-nav {
     /* display: flex; */
     /* wrap: wrap; */
@@ -33,7 +36,7 @@
   .main-nav__wraper {
     display: flex;
     width: 100%;
-    height: 90px;
+    height: 88px;
     justify-content: space-between;
     /* width: @tablet-width; */
     margin: 0 auto;
@@ -44,8 +47,16 @@
   }
 
   .main-nav__list {
+    .default-nole;
     display: flex;
-    wrap: wrap;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-right: 6.5%;
+    border-bottom: 1px solid @border-gray;
+    &--descktop-list {
+      display: none;
+    }
+
   }
 }
 
@@ -58,9 +69,10 @@
 
 
 // здесь нужно будет показать скрытый элемент
-  .descktop-list {
-	display: block;
-
+  .main-nav__list{
+    &--descktop-list {
+      display: block;
+    }
 
   }
 }
