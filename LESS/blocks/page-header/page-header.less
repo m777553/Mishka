@@ -10,20 +10,26 @@
 }
 
 .page-header__header-logo {
-  /* height: 80px; */
+  height: 80px;
+  width: 320px;
   display: block;
   margin: 0 auto;
-
+  border-bottom: 1px solid @border-gray;
 
 
 }
 .page-header__header-img {
   display: block;
   margin: auto;
+  width: 86px;
+  /* height: 100%; */
+  padding-top: 22px;
 }
 
 .page-header__image-wrap {
   width: 100%;
+  height: 80px;
+
 
   /* flex-grow: 1; */
   /* border: 2px solid yellow; */
@@ -61,25 +67,48 @@
 }
 
 /* Стили для планшета */
+
+
+
 @media (min-width: @tablet-width) {
   .page-header {
     /* flex-direction: row; */
     flex-wrap: wrap;
   }
-.page-header__image-wrap {
-  width: 145px;
-  height: 90px;
 
-  position: absolute;
-  left: 50px;
-  top: 17px;
-}
+  .page-header__header-logo {
+    border-bottom: 0;
+    height: 89px;
+
+  }
+  .page-header__image-wrap {
+    width: 145px;
+    height: 90px;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .page-header__header-img {
+    width: 116px;
+  }
 
   .page-header__cover {
   height: 746px;
   width: 100%;
   background-image: url("../less/blocks/page-header/hero-tablet.jpg");
 
+  }
+  .header-cover__delivery {
+    .default-nole;
+    font-size: 15px;
+    line-height: 24px;
+    display: block;
+    position: absolute;
+    top: 110px;
+    right: 6.5%;
+    z-index: 2;
   }
   .header-cover__title {
     font-size: 43px;
@@ -88,4 +117,16 @@
     margin-top: 160px;
   }
 
+}
+
+
+@media (min-width: @desktop-width) {
+  .page-header__image-wrap {
+  top: 0;
+  left: 50%;
+  margin-left: -72px;
+  }
+  .page-header__header-logo {
+    width: auto;
+  }
 }

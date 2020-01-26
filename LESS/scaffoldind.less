@@ -43,13 +43,13 @@ ul {
 a {
   text-decoration: none;
   color: @text-gray;
-}
 
-a:hover {
-  color: @text-hover;
-}
-a:focus {
-  color: @text-down;
+  &:hover, &:focus {
+    color: @text-hover;
+  }
+  &:active {
+    color: @text-down;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {

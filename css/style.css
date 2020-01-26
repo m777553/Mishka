@@ -36,10 +36,11 @@ a {
   text-decoration: none;
   color: #444444;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #666666;
 }
-a:focus {
+a:active {
   color: #b2b2b2;
 }
 .visually-hidden:not(:focus):not(:active) {
@@ -80,6 +81,10 @@ img {
 .main-nav__toogle {
   display: none;
 }
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+}
 .main-nav__list--descktop-list {
   display: none;
 }
@@ -116,7 +121,13 @@ img {
 }
 @media (min-width: 1150px) {
   .main-nav__list--descktop-list {
-    display: block;
+    display: flex;
+    position: absolute;
+    border: 0;
+    top: 88px;
+    left: 6.4%;
+    /*       width: 350px;
+      justify-content: space-between; */
   }
 }
 /* .site-list {
@@ -125,19 +136,38 @@ img {
  */
 .site-list {
   width: 100%;
-  height: 88px;
+  /* height: 88px; */
 }
 .site-list__item a {
   display: block;
   width: 100%;
-  padding-left: 23.5%;
+  padding-left: 25%;
   padding-top: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid #ececec;
   font-weight: bold;
 }
+.site-list__item:nth-child(3) {
+  background: url("../less/blocks/site-list/search.svg") 31px 36px no-repeat;
+  /* border-left: 1px solid @border-gray; */
+}
+.site-list__item:nth-child(3):hover,
+.site-list__item:nth-child(3):focus {
+  background-image: url("../less/blocks/site-list/search-hover.svg");
+}
+.site-list__item:nth-child(4) {
+  background: url("../less/blocks/site-list/cart.svg") 31px 36px no-repeat;
+  /* border-left: 1px solid @border-gray; */
+}
+.site-list__item:nth-child(4):hover,
+.site-list__item:nth-child(4):focus {
+  background-image: url("../less/blocks/site-list/cart-hover.svg");
+}
 /* для планшета */
 @media (min-width: 768px) {
+  .site-list {
+    height: 88px;
+  }
   .site-list__item a {
     padding: 0;
     margin: 0;
@@ -155,6 +185,7 @@ img {
     left: 6.5%;
     font-size: 17px;
     width: 167px;
+    padding-top: 20px;
     padding-left: 0;
     border-left: 0;
   }
@@ -165,6 +196,7 @@ img {
     left: 28.2%;
     font-size: 17px;
     width: 167px;
+    padding-top: 20px;
     padding-left: 0;
     border-left: 0;
   }
@@ -182,34 +214,34 @@ img {
     overflow: hidden;
   }
   .site-list__item:nth-child(3) {
-    background: url("../less/blocks/site-list/search.svg") center no-repeat;
-    /* border-left: 1px solid @border-gray; */
-  }
-  .site-list__item:nth-child(3):hover {
-    background-image: url("../less/blocks/site-list/search-hover.svg");
-  }
-  .site-list__item:nth-child(4) {
-    background: url("../less/blocks/site-list/cart.svg") 31px 36px no-repeat;
-    /* border-left: 1px solid @border-gray; */
-  }
-  .site-list__item:nth-child(4):hover {
-    background-image: url("../less/blocks/site-list/cart-hover.svg");
+    background-position: center;
   }
 }
 /* для ПК */
 @media (min-width: 1150px) {
-  .site-list__item:nth-child(4) span {
-    /* flex-direction: row; */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  .site-list__item:nth-child(1) a {
+    top: 0;
+    padding-top: 32px;
+  }
+  .site-list__item:nth-child(2) a {
+    top: 0;
+    left: 24.8%;
+    padding-top: 32px;
+    padding-left: 41px;
+    width: auto;
+    border-left: 1px solid #ececec;
+  }
+  .site-list__item--new:nth-child(1) a {
+    left: 0;
+    border-width: 0;
+    width: 175px;
+    font-size: 15px;
+  }
+  .site-list__item--sale:nth-child(2) a {
+    margin-left: 195px;
+    border-width: 0;
+    width: 175px;
+    font-size: 15px;
   }
 }
 .default-nole {
@@ -237,16 +269,22 @@ img {
   /* border: 2px solid red; */
 }
 .page-header__header-logo {
-  /* height: 80px; */
+  height: 80px;
+  width: 320px;
   display: block;
   margin: 0 auto;
+  border-bottom: 1px solid #ececec;
 }
 .page-header__header-img {
   display: block;
   margin: auto;
+  width: 86px;
+  /* height: 100%; */
+  padding-top: 22px;
 }
 .page-header__image-wrap {
   width: 100%;
+  height: 80px;
   /* flex-grow: 1; */
   /* border: 2px solid yellow; */
 }
@@ -279,22 +317,50 @@ img {
     /* flex-direction: row; */
     flex-wrap: wrap;
   }
+  .page-header__header-logo {
+    border-bottom: 0;
+    height: 89px;
+  }
   .page-header__image-wrap {
     width: 145px;
     height: 90px;
     position: absolute;
-    left: 50px;
-    top: 17px;
+    left: 0px;
+    top: 0px;
+  }
+  .page-header__header-img {
+    width: 116px;
   }
   .page-header__cover {
     height: 746px;
     width: 100%;
     background-image: url("../less/blocks/page-header/hero-tablet.jpg");
   }
+  .header-cover__delivery {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 24px;
+    display: block;
+    position: absolute;
+    top: 110px;
+    right: 6.5%;
+    z-index: 2;
+  }
   .header-cover__title {
     font-size: 43px;
     line-height: 50px;
     width: 495px;
     margin-top: 160px;
+  }
+}
+@media (min-width: 1150px) {
+  .page-header__image-wrap {
+    top: 0;
+    left: 50%;
+    margin-left: -72px;
+  }
+  .page-header__header-logo {
+    width: auto;
   }
 }
