@@ -13,15 +13,12 @@
 
   <body>
     <header class="page-header">
-    <!-- <div class="main-nav__wraper"> -->
-
       <div class="page-header__image-wrap">
         <picture class="page-header__header-logo">
            <source media="(min-width: 1150px)" srcset="LESS/blocks/page-header/mishka-logo-desktop.svg">
            <source media="(min-width: 768px)" srcset="LESS/blocks/page-header/mishka-logo-tablet.svg">
            <img class="page-header__header-img" src="LESS/blocks/page-header/mishka-logo-mobile.svg" width="149" height="72" alt="Mishka - магазин товаров ручной работы">
         </picture>
-
       </div>
       <nav class="page-header__nav main-nav">
       <!-- Здесь где-то кнопка закрыть меню -->
@@ -42,10 +39,10 @@
              </li>
           </ul>
           <ul class="main-nav__list main-nav__list--descktop-list">
-            <li class="site-list__item site-list__item--new <!-- descktop-list__item -->">
+            <li class="site-list__item site-list__item--new">
               <a href="#">Новые поступления</a>
             </li>
-            <li class="site-list__item site-list__item--sale <!-- descktop-list__item -->">
+            <li class="site-list__item site-list__item--sale">
               <a href="#">Распродажа</a>
             </li>
           </ul>
@@ -59,7 +56,7 @@
     </header>
 
     <main class="page-main">
-      <section class="product">
+      <section class="page-main__product">
           <ul class="product-list">
             <li class="product-list__item product-list__item--interior-article">
               <a href="№">Предметы интерьера</a>
@@ -89,7 +86,7 @@
         <button class="product__order-button button" type="button">Заказать</button>
         <img class="product__photo" src="img/triple-set-desktop.jpg" width="525" height="636" alt="Фото корзинок в трёх вариантах размера">
       </section>
-      <section class="about-us">
+      <section class="page-main__about-us about-us">
         <h2  class="about-us__title">Коротко о нас:</h2>
         <div class="about-us__wraper">
           <ul class="about-us__list">
@@ -102,7 +99,7 @@
           </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section class="page-main__reviews reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
           <button class="reviews__button button" type="button">Написать</button>
@@ -133,7 +130,7 @@
 
         </div>
       </section>
-      <section class="contacts">
+      <section class="page-main__contacts contacts">
         <h2 class="contacts__title">Контакты</h2>
         <table class="contacts__list">
           <tr>
