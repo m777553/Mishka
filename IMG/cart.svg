@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="18" viewBox="0 0 21 18">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <image id="cart.svg" class="cls-1" width="21" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAABPklEQVQ4jZ2UYWfEQBCG32vP0XKEUvqhJrYc/XD0//+Kcp9vdfTcUY4QrhyhJt60k9ikSYa1dmb3ybszk11gwILIC4AMwC6qXoPICsAWQBFV930nb/oCQWRN4NWA5uNsI2N8GhTAE+djx3/sxMdBg4gpNCWXqHr2Ma4vFue+0UqfOR964ofOvmFoEHkAYAUpo2qZOkS/jRX3t2wRRO4B3DpnTugngO8epWZ3VGqF+3D+agngtedQ8moJMwEb7zboiZWsAHyNBKXskTc+1c0fRLb84ntUrabSgojB3tjTu6ZQBedki4ywzHOWXDTq8iCSz04AOQ209DmZAWtqUrfg74NChdZz+6haDCKc8a+yh+ccVevW8s0/N6+tfLagTt0sqL9dk1Ov1p41S0X93P1j1oZWh1a6klDmdor9QQH8AEtoYVxhs8zlAAAAAElFTkSuQmCC"/>
+</svg>

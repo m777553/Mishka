@@ -1,0 +1,95 @@
+.product-list {
+  .default-nole;
+}
+
+.product-list__item a{
+  display: block;
+  height: 103px;
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+  color: @bg-white;
+  background-color: @left-green-btn;
+  background-position:  242px 23px;
+
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 160px;
+
+  &:hover, &:focus {
+    height: 108px;
+    background-position:  242px 18px;
+
+  }
+  &:active {
+    color: @text-green-btn-active;
+  }
+
+}
+
+.product-list__item--interior-article a {
+  background-image: url("../less/blocks/product-list/interior.svg");
+  background-repeat: no-repeat;
+
+  margin-top: -73px;
+  &:hover, &:focus {
+    background-image: url("../less/blocks/product-list/interior-hover.svg");
+  }
+}
+
+.product-list__item--toys a {
+  background-color: @right-green-btn;
+  background-image: url("../less/blocks/product-list/toy.svg");
+  background-repeat: no-repeat;
+
+  &:hover, &:focus {
+    background-image: url("../less/blocks/product-list/toy-hover.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .product-list__item a{
+    margin-top: -119px;
+    height: 119px;
+    width: 334px;
+    padding-top: 36px;
+    padding-left: 36px;
+    font-size: 20px;
+    line-height: 30px;
+
+    background-position:  257px 30px;
+
+    &:hover, &:focus {
+      height: 124px;
+      background-position:  257px 25px;
+      margin-top: -124px;
+    }
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .product-list__item a{
+    width: 525px;
+    padding-right: 350px;
+
+    background-position:  448px 30px;
+
+    &:hover, &:focus {
+      background-position:  448px 25px;
+    }
+  }
+
+}
