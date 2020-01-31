@@ -86,6 +86,17 @@ img {
   text-transform: uppercase;
   background: #ffffff;
 }
+.button:hover,
+.button:focus {
+  background: #192327;
+  color: #ffffff;
+  border-color: #192327;
+}
+.button:active {
+  background: #444444;
+  color: #7c7c7c;
+  border-color: #444444;
+}
 .main-nav {
   padding: 0;
   margin: 0;
