@@ -1,0 +1,135 @@
+.about-us__title {
+  font-size: 25px;
+  line-height: 30px;
+  width: 260px;
+  margin: 175px auto 18px;
+}
+
+.about-us__wraper {
+
+}
+
+.about-us__list {
+  .default-nole;
+
+}
+
+.about-us__item {
+  position: relative;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  width: 260px;
+  min-height: 105px;
+  padding-top: 70px;
+  margin: 0 auto;
+
+  &--eco::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 55px;
+    height: 55px;
+    background: url("../less/blocks/about-us/icon-sprite.svg") no-repeat 0 0;
+  }
+
+    &--clew::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -7px;
+    width: 55px;
+    height: 55px;
+    background: url("../less/blocks/about-us/icon-sprite.svg") no-repeat 0 -55px;
+  }
+
+    &--money::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    width: 55px;
+    height: 55px;
+    background: url("../less/blocks/about-us/icon-sprite.svg") no-repeat -55px 0;
+  }
+
+    &--rocket::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    background: url("../less/blocks/about-us/icon-sprite.svg") no-repeat -55px -55px;
+  }
+
+    &--heart::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    width: 55px;
+    height: 55px;
+    background: url("../less/blocks/about-us/icon-sprite.svg") no-repeat -110px 0;
+  }
+
+    &--gift::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    width: 55px;
+    height: 55px;
+    background: url("../less/blocks/about-us/icon-sprite.svg") no-repeat -110px -55px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: 668px;
+    margin: 77px auto 50px;
+  }
+
+  .about-us__wraper {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .about-us__item {
+    position: relative;
+    font-size: 20px;
+    line-height: 22px;
+    width: 334px;
+    padding-top: 70px;
+
+
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
+    width: 700px;
+    margin: 100px auto 38px;
+  }
+
+  .about-us__wraper {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-us__item {
+    width: 350px;
+    padding-top: 57px;
+  }
+}
