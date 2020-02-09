@@ -700,6 +700,9 @@ img {
 .page-main__reviews {
   margin-top: 60px;
 }
+.page-main__contacts {
+  margin-top: 100px;
+}
 @media (min-width: 768px) {
   .page-main__product {
     position: relative;
@@ -929,6 +932,9 @@ img {
     font-size: 17px;
     padding-right: 20px;
   }
+  .reviews__text {
+    min-height: 130px;
+  }
   .reviews__autor {
     padding: 0;
     margin: 0;
@@ -999,4 +1005,45 @@ img {
   .reviews__toogles {
     margin-bottom: 0px;
   }
+}
+.contacts__wrap {
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 260px;
+}
+.contacts__title {
+  font-size: 18px;
+  line-height: 30px;
+}
+.contacts__list {
+  width: 260px;
+  font-size: 15px;
+  line-height: 30px;
+  border-collapse: collapse;
+}
+.contacts__item {
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  padding-bottom: 35px;
+}
+.contacts__item:nth-child(odd) {
+  /* display: block; */
+  width: 75px;
+}
+.contacts__item a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #62d1ba;
+}
+.contacts__item a:hover,
+.contacts__item a:focus {
+  border-bottom-color: #56c3b2;
+}
+.contacts__map {
+  width: 260px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2px solid #56c3b2;
 }
