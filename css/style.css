@@ -75,6 +75,32 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+@keyframes manifest {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.15;
+  }
+  35% {
+    opacity: 0.35;
+    color: #63d1bb;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  65% {
+    opacity: 0.65;
+    color: #63d1bb;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+    color: #63d1bb;
+  }
+}
 .button {
   display: block;
   width: 260px;
@@ -500,7 +526,7 @@ img {
   height: 6px;
   background: url("../less/blocks/product/zigzag-line5223.svg") repeat-x 0 0;
   background-size: auto 6px;
-  z-index: 4;
+  z-index: 1;
   opacity: 0.5;
 }
 .product__name {
@@ -893,6 +919,15 @@ img {
   width: 84px;
   height: 40px;
   background: url("../less/blocks/page-footer/htmlacademy.svg") no-repeat center;
+  background-size: 30px 35px ;
+  opacity: 0.75;
+}
+.page-footer__copyright-link:hover,
+.page-footer__copyright-link:focus {
+  opacity: 1;
+}
+.page-footer__copyright-link :active {
+  opacity: 0.2;
 }
 @media (min-width: 768px) {
   .page-footer__wrap {
@@ -908,6 +943,11 @@ img {
     width: 105px;
     height: 70px;
     background: url("../less/blocks/page-footer/logo-footer.svg") no-repeat center;
+    background-size: 100%;
+  }
+  .page-footer__logo-link:hover,
+  .page-footer__logo-link:focus {
+    background-image: url("../less/blocks/page-footer/logo-footer-green.svg");
   }
   .page-footer__social {
     width: 180px;
@@ -943,9 +983,92 @@ img {
   width: 60px;
   background: url("../less/blocks/social/fb.svg") no-repeat center;
 }
+.social__link:hover,
+.social__link:focus {
+  background-image: url("../less/blocks/social/fb-green.svg");
+}
 .social__link--instagram {
   background-image: url("../less/blocks/social/insta.svg");
 }
+.social__link--instagram:hover,
+.social__link--instagram:focus {
+  background-image: url("../less/blocks/social/insta-green.svg");
+}
 .social__link--twitter {
   background-image: url("../less/blocks/social/twitter.svg");
+}
+.social__link--twitter:hover,
+.social__link--twitter:focus {
+  background-image: url("../less/blocks/social/twitter-green.svg");
+}
+.modal {
+  display: none;
+}
+.modal-show {
+  display: block;
+  animation-name: manifest;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.modal__white-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: #ffffff;
+  opacity: 0.75;
+}
+.modal__wrap {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+  margin-left: -160px;
+  z-index: 5;
+  width: 320px;
+  height: 400px;
+  background: #ffffff;
+  border: 1px solid #c7c7c7;
+  box-shadow: 0 6px 6px #ececec;
+}
+.modal__title {
+  width: 260px;
+  padding: 0 50px 0;
+  margin: 37px auto 0;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal__text {
+  width: 260px;
+  padding: 0 50px 0;
+  margin: 27px auto 0;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+.modal__buttons {
+  display: flex;
+  width: 260px;
+  margin: 30px auto 0;
+  justify-content: space-between;
+}
+.modal__button {
+  width: 80px;
+  height: 50px;
+  border-color: #ececec;
+}
+.modal__button:hover,
+.modal__button:focus {
+  color: #444444;
+  background: #ffffff;
+  border-color: #63d1bb;
+}
+.modal__button--bying {
+  margin: 30px auto 0;
+  color: #ffffff;
+  background: #63d1bb;
+  border-color: #63d1bb;
 }

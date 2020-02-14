@@ -38,6 +38,14 @@
   width: 84px;
   height: 40px;
   background:  url("../less/blocks/page-footer/htmlacademy.svg") no-repeat center;
+  background-size: 30px 35px ;
+  opacity: 0.75;
+  &:hover,&:focus {
+    opacity: 1;
+  }
+  :active {
+    opacity: 0.2;
+  }
 }
 
 
@@ -57,6 +65,10 @@
     width: 105px;
     height: 70px;
     background: url("../less/blocks/page-footer/logo-footer.svg") no-repeat center;
+    background-size: 100%;
+    &:hover, &:focus {
+      background-image: url("../less/blocks/page-footer/logo-footer-green.svg")
+    }
   }
 
   .page-footer__social {
