@@ -138,3 +138,4 @@ var multiItemSlider = (function () {
 
   }
 }());
+var slider = multiItemSlider('.slider');

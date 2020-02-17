@@ -18,6 +18,19 @@
   }
 }
 
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+.slider__wrapper {
+  display: flex;
+  transition: transform 0.6s ease; /* 0.6 длительность смены слайда в секундах */
+}
+.slider__item {
+  flex: 0 0 100%; /* определяет количество активных слайдов (в данном случае 2 */
+  max-width: 100%; /* определяет количество активных слайдов (в данном случае 2 */
+}
+
 @media (min-width: @tablet-width) {
   .slider__toogles {
     position: absolute;
