@@ -84,3 +84,94 @@
   }
 
 }
+
+
+
+/* только для мобильного */
+@media (max-width: 767px) {
+  .main-nav{
+    position: relative;
+  }
+
+  .main-nav__toogle {
+      position: absolute;
+      display: block;
+      .default-nole;
+      top: -50px;
+      right: 50%;
+      margin-right: -100px;
+      width: 22px;
+      height: 22px;
+      border: none;
+      background: none;
+    }
+
+
+
+    /* здесь стили, которые зависят от состояния меню (закрыто или открыто) */
+
+    .main-nav--nojs .main-nav__toogle {
+      display: none;
+    }
+
+      .main-nav--closed .main-nav__toogle::before {
+        content: "";
+        display: block;
+        .default-nole;
+        transform: translateY(-8px);
+        width: 22px;
+        height: 2px;
+        background: #221f1f;
+        box-shadow: 0 6px #221f1f, 0 13px #221f1f;
+      }
+
+    .main-nav--opened .main-nav__toogle::before {
+        content: "";
+        display: block;
+        .default-nole;
+        transform: rotate(45deg);
+        width: 24px;
+        height: 2px;
+        background: #221f1f;
+      }
+
+      .main-nav--opened .main-nav__toogle::after {
+        content: "";
+        display: block;
+        .default-nole;
+        transform: translateY(-2px) rotate(-45deg);
+        width: 24px;
+        height: 2px;
+        background: #221f1f;
+
+      }
+
+      .main-nav--closed .main-nav__wraper {
+        display: none;
+      }
+
+      .main-nav--opened .main-nav__wraper {
+        display: block;
+      }
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
