@@ -55,33 +55,112 @@
 
 
     <main class="page-catalog">
-      <div class="page-catalog__wrap">
-        <ul class="page-catalog__list">
-          <li class="page-catalog__item">
-            <div class="page-header__image-wrap">
-              <picture class="page-header__header-logo">
-               <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg">
-               <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
-               <img class="page-header__header-img" src="img/photo-1-mobile.jpg" width="260" height="auto" alt="Фото вязаного зайца">
-              </picture>
-              <div class="page-header__info-wrap">
-                <div class="page-header__description-wrap">
-                  <h2 class="page-header__description-title"></h2>
-                  <p class="page-header__description"></p>
-                </div>
-                <div class="page-header__bying-wrap">
-                  <p class="page-header__price"></p>
-                  <button class="product__order-button product__order-button--catalog button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+      <section class="page-catalog__catalog catalog">
+      <h2 class="visually-hidden">Перечень товаров</h2>
+        <div class="catalog__wrap">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <div class="catalog__item-wrap">
+                <a href="#"><picture class="catalog__image">
+                 <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg">
+                 <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
+                 <img class="catalog__image-img" src="img/photo-1-mobile.jpg" width="260" height="195" alt="Фото вязаного зайца">
+                </picture></a>
+                <div class="catalog__info-wrap">
+                  <div class="catalog__description-wrap">
+                    <h3 class="catalog__description-title"><a href="">Зайчик-попрыгайчик</a></h3>
+                    <p class="catalog__description">Рост 30 см, вес 200 г</p>
+                  </div>
+                  <div class="catalog__bying-wrap">
+                    <p class="catalog__price">1200 руб.</p>
+                    <button class="product__order-button catalog-button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-        </ul>
+            <li class="catalog__item">
+              <div class="catalog__item-wrap">
+                <a href="#"><picture class="catalog__image">
+                 <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg">
+                 <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg">
+                 <img class="catalog__image-img" src="img/photo-2-mobile.jpg" width="260" height="195" alt="Фото вязаного зайца">
+                </picture></a>
+                <div class="catalog__info-wrap">
+                  <div class="catalog__description-wrap">
+                    <h3 class="catalog__description-title"><a href="#">Корзинка для белья</a></h3>
+                    <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
+                  </div>
+                  <div class="catalog__bying-wrap">
+                    <p class="catalog__price">690 руб.</p>
+                    <button class="product__order-button catalog-button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
 
-      </div>
+            <li class="catalog__item">
+              <div class="catalog__item-wrap">
+                <a href="#"><picture class="catalog__image">
+                 <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg">
+                 <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
+                 <img class="catalog__image-img" src="img/photo-1-mobile.jpg" width="260" height="195" alt="Фото вязаного зайца">
+                </picture></a>
+                <div class="catalog__info-wrap">
+                  <div class="catalog__description-wrap">
+                    <h3 class="catalog__description-title"><a href="#">Большая корзинка <br>для игрушек</a></h3>
+                    <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
+                  </div>
+                  <div class="catalog__bying-wrap">
+                    <p class="catalog__price">1500 руб.</p>
+                    <button class="product__order-button catalog-button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
+      <section class="page-catalog__production production">
+        <div class="production__wrap">
+          <h2 class="production__title">Процесс производства</h2>
+          <div class="production__video-wrap">
+            <video width="260" height="150" poster="img/video-mobile.jpg" preload="none">
+              <source src="video/process.mp4" type="video/mp4">
+              <source src="video/process.webm" type="video/webm">
+              <source src="video/process.ogv" type="video/ogg">
+            </video>
+          </div>
+          <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__button button" href="knitting.html">Сделать заказ</a>
+        </div>
+      </section>
     </main>
+
+
+    <footer class="page-footer">
+      <div class="page-footer__wrap">
+        <a class="page-footer__logo-link" href="#"><span class="visually-hidden">Главная страница</span></a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Мы в инстаграм</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в фэйсбук</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в твитер</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright-wrap">
+          <b class="page-footer__copyright-text">Разработано:</b>
+          <a class="page-footer__copyright-link" href="#"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
+      </div>
+    </footer>
 
     <!-- модалка -->
     <div class="modal modal--bying">
