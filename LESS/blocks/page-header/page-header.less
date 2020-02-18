@@ -43,12 +43,15 @@
 
 }
 
-.page-header__cover {
+.header-cover {
   width: 100%;
   min-height: 373px;
   background: @bg-gray url("../less/blocks/page-header/hero-mobile.jpg") center no-repeat;
 
-  /* border: 2px solid green; */
+  &--catalog {
+    background-image: none;
+    min-height: 177px;
+  }
 }
 
 /* Мини блок header-cover */
@@ -95,11 +98,15 @@
     width: 116px;
   }
 
-  .page-header__cover {
-  height: 746px;
+  .header-cover {
+  min-height: 746px;
   width: 100%;
   background-image: url("../less/blocks/page-header/hero-tablet.jpg");
 
+    &--catalog {
+    background-image: none;
+    min-height: 225px;
+  }
   }
   .header-cover__delivery {
     .default-nole;
@@ -116,6 +123,10 @@
     line-height: 50px;
     width: 495px;
     margin-top: 160px;
+
+    &--catalog {
+      margin-top: 100px;
+    }
   }
 
 }

@@ -427,11 +427,14 @@ img {
 .page-header__nav {
   width: 100%;
 }
-.page-header__cover {
+.header-cover {
   width: 100%;
   min-height: 373px;
   background: #f9f9f9 url("../less/blocks/page-header/hero-mobile.jpg") center no-repeat;
-  /* border: 2px solid green; */
+}
+.header-cover--catalog {
+  background-image: none;
+  min-height: 177px;
 }
 /* Мини блок header-cover */
 .header-cover__delivery {
@@ -466,10 +469,14 @@ img {
   .page-header__header-img {
     width: 116px;
   }
-  .page-header__cover {
-    height: 746px;
+  .header-cover {
+    min-height: 746px;
     width: 100%;
     background-image: url("../less/blocks/page-header/hero-tablet.jpg");
+  }
+  .header-cover--catalog {
+    background-image: none;
+    min-height: 225px;
   }
   .header-cover__delivery {
     padding: 0;
@@ -487,6 +494,9 @@ img {
     line-height: 50px;
     width: 495px;
     margin-top: 160px;
+  }
+  .header-cover__title--catalog {
+    margin-top: 100px;
   }
 }
 @media (min-width: 1150px) {

@@ -9,52 +9,97 @@
     <link rel="stylesheet" href="css/normolize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
+
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html"><img class="page-header__header-logo"
-      src="IMG/mishka-logo-desktop.svg" width="149" height="72"
-      alt="Mishka - магазин товаров ручной работы"></a>
-      <nav class="main-nav">
-      <button class="main-nav__toogle"  type="button">Открыть меню</button>
+      <div class="page-header__image-wrap">
+        <picture class="page-header__header-logo">
+           <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+           <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+           <img class="page-header__header-img" src="img/mishka-logo-mobile.svg" width="149" height="72" alt="Mishka - магазин товаров ручной работы">
+        </picture>
+      </div>
+      <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toogle"  type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wraper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--choosen">
-              <a href="#">Каталог товаров</a>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог товаров</a>
              </li>
-             <li class="site-list__item ">
+             <li class="site-list__item">
               <a href="knitting.html">Вязание на заказ</a>
              </li>
              <li class="site-list__item site-list__item--loupe">
-              <a href="№">Поиск по сайту</a>
+              <a href="№"><span>Поиск по сайту</span></a>
              </li>
              <li class="site-list__item site-list__item--basket">
               <a href="№">Корзина: пока пуста</a>
              </li>
           </ul>
-          <ul class="main-nav__list descktop-list">
-            <li class="descktop-list__item">
+          <ul class="main-nav__list main-nav__list--descktop-list">
+            <li class="site-list__item site-list__item--new">
               <a href="#">Новые поступления</a>
             </li>
-            <li class="descktop-list__item">
+            <li class="site-list__item site-list__item--sale">
               <a href="#">Распродажа</a>
             </li>
           </ul>
-
-        </div>
+         </div>
       </nav>
-      <div class="header-cover">
+      <div class="page-header__cover header-cover header-cover--catalog">
         <p class="header-cover__delivery">Бесплатная доставка по России</p>
-        <h1 class="header-cover__title">Вязание на заказ</h1>
+        <h1 class="header-cover__title header-cover__title--catalog">Каталог товаров</h1>
       </div>
     </header>
+
+
     <main class="page-catalog">
-      <h1 class="page-catalog__title"></h1>
+      <div class="page-catalog__wrap">
+        <ul class="page-catalog__list">
+          <li class="page-catalog__item">
+            <div class="page-header__image-wrap">
+              <picture class="page-header__header-logo">
+               <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg">
+               <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg">
+               <img class="page-header__header-img" src="img/photo-1-mobile.jpg" width="260" height="auto" alt="Фото вязаного зайца">
+              </picture>
+              <div class="page-header__info-wrap">
+                <div class="page-header__description-wrap">
+                  <h2 class="page-header__description-title"></h2>
+                  <p class="page-header__description"></p>
+                </div>
+                <div class="page-header__bying-wrap">
+                  <p class="page-header__price"></p>
+                  <button class="product__order-button product__order-button--catalog button" type="button"><span class="visually-hidden">Добавить в корзину</span></button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
 
     </main>
 
+    <!-- модалка -->
+    <div class="modal modal--bying">
+      <div class="modal__white-background"></div>
+      <div class="modal__wrap">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <div class="modal__buttons">
+          <button class="modal__button button" type="button">S</button>
+          <button class="modal__button button" type="button">M</button>
+          <button class="modal__button button" type="button">L</button>
+        </div>
+        <button class="modal__button--bying button" type="button">Добавить</button>
+      </div>
+    </div>
 
 
 
-
+    <script src="JS/script.js"></script>
     </body>
   </html>

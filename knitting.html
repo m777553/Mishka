@@ -9,42 +9,49 @@
     <link rel="stylesheet" href="css/normolize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
+
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html"><img class="page-header__header-logo"
-      src="IMG/mishka-logo-desktop.svg" width="149" height="72"
-      alt="Mishka - магазин товаров ручной работы"></a>
-      <nav class="main-nav">
-      <button class="main-nav__toogle"  type="button">Открыть меню</button>
+      <div class="page-header__image-wrap">
+        <picture class="page-header__header-logo">
+           <source media="(min-width: 1150px)" srcset="less/blocks/page-header/mishka-logo-desktop.svg">
+           <source media="(min-width: 768px)" srcset="less/blocks/page-header/mishka-logo-tablet.svg">
+           <img class="page-header__header-img" src="less/blocks/page-header/mishka-logo-mobile.svg" width="149" height="72" alt="Mishka - магазин товаров ручной работы">
+        </picture>
+      </div>
+      <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
+      <!-- Здесь где-то кнопка закрыть меню -->
+        <button class="main-nav__toogle"  type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wraper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="catalog.html">Каталог товаров</a>
              </li>
-             <li class="site-list__item site-list__item--choosen">
+             <li class="site-list__item">
               <a href="knitting.html">Вязание на заказ</a>
              </li>
              <li class="site-list__item site-list__item--loupe">
-              <a href="№">Поиск по сайту</a>
+              <a href="№"><span>Поиск по сайту</span></a>
              </li>
              <li class="site-list__item site-list__item--basket">
               <a href="№">Корзина: пока пуста</a>
              </li>
           </ul>
-          <ul class="main-nav__list descktop-list">
-            <li class="descktop-list__item">
+          <ul class="main-nav__list main-nav__list--descktop-list">
+            <li class="site-list__item site-list__item--new">
               <a href="#">Новые поступления</a>
             </li>
-            <li class="descktop-list__item">
+            <li class="site-list__item site-list__item--sale">
               <a href="#">Распродажа</a>
             </li>
           </ul>
-
-        </div>
+         </div>
       </nav>
-      <div class="header-cover">
+      <!-- </div> -->
+      <div class="page-header__cover header-cover">
         <p class="header-cover__delivery">Бесплатная доставка по России</p>
-        <h1 class="header-cover__title">Вязание на заказ</h1>
+        <h1 class="header-cover__title">Милые штуки ручной<br> работы для дома</h1>
       </div>
     </header>
 
