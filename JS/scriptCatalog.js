@@ -1,4 +1,6 @@
 var link = document.querySelector(".product__order-button");
+var link2 = document.querySelector(".product__order-button2");
+var link3 = document.querySelector(".product__order-button3");
 var popup = document.querySelector(".modal--bying");
 var close = document.querySelector(".modal__white-background");
 var focusButton = document.querySelector(".modal__button");
@@ -11,6 +13,17 @@ link.addEventListener("click", function (evt) {
 
 });
 
+link2.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  focusButton.focus();
+});
+
+link3.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  focusButton.focus();
+});
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();

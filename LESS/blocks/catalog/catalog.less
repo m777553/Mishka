@@ -1,6 +1,3 @@
-
-
-
 .catalog__wrap {
 	width: 260px;
 	margin: 0 auto;
@@ -15,14 +12,6 @@
   margin-top: 30px;
 }
 
-/* .catalog__image-wrap {
-  .default-nole;
-}
-
-.catalog__image {
-  .default-nole;
-  display: block;
-} */
 .catalog__image-img {
   .default-nole;
   display: block;
@@ -60,8 +49,6 @@
   line-height: 30px;
   .default-nole;
   margin-bottom: 20px;
-  /* padding-top: 0px; */
-  /* padding-bottom: 10px; */
 }
 
 .catalog__bying-wrap {
@@ -108,17 +95,13 @@
     width: 100%;
     height: 18px;
     background: url("../img/zigzag.svg") repeat-x 0 0;
-    z-index: 100;
+    z-index: 2;
     }
   }
 .catalog__wrap {
 	width: 668px;
 	margin: 0 auto;
 }
-
-/* .catalog__list {
-  .default-nole;
-} */
 
 .catalog__item {
   .default-nole;
@@ -127,15 +110,9 @@
 
 .catalog__item-wrap {
   display: flex;
+  flex-wrap: wrap;
 }
-
-/* .catalog__image {
-  .default-nole;
-  display: block;
-} */
 .catalog__image-img {
-/*   .default-nole;
-  display: block; */
   width: 100%;
 }
 .catalog__item-wrap a {
@@ -183,7 +160,7 @@
   font-size: 17px;
   .default-nole;
   padding-top: 26px;
-  padding-bottom: 27px;
+  /* padding-bottom: 27px; */
 }
 
 .catalog-button {
@@ -200,13 +177,87 @@
 @media (min-width: @desktop-width) {
   .catalog__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+  }
+
+   .catalog {
+     padding-top: 132px;
+    &::before {
+      top: -17px;
+      }
+    }
+  .catalog__wrap {
+    width: 1050px;
+  }
+
+  .catalog__item {
+    margin-top: 0;
   }
 
   .catalog__item-wrap {
     flex-direction: column;
+    width: 314px;
+  }
+/*   .catalog__image-img {
+    width: 100%;
+  } */
+  .catalog__item-wrap a {
+/*     .default-nole;
+    display: block; */
+    width: 100%;
+  }
+  .catalog__info-wrap {
+    width: 100%;
+    min-height: 200px;
+    &:hover, &:focus{
+      box-shadow: 0 3px 3px 2px rgba(232,232,232,0.5);
+    }
   }
 
+  .catalog__description-wrap {
+    margin: 0 auto;
+    width: 257px;
+    min-height: 123px;
+  }
+
+  .catalog__description-title {
+    width: 257px;
+    .default-nole;
+    padding-top: 27px;
+    padding-left: 0;
+  }
+  .catalog__description-title a{
+    width: 268px;
+  }
+  .catalog__description {
+/*     font-size: 15px;
+    .default-nole; */
+  }
+
+  .catalog__bying-wrap {
+    /* position: relative;
+    margin: 0 auto; */
+    width: 257px;
+    min-height: 75px;
+  }
+
+  .catalog__price {
+/*     font-size: 17px;
+    .default-nole;
+    padding-top: 26px;
+    padding-bottom: 27px; */
+  }
+
+  .catalog-button {
+
+    background-position: 8px 19px;
+
+   /*  &:hover, &:focus {
+      background-image: url("../img/cart-hover.svg")
+    } */
+  }
 }
 
 
