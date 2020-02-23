@@ -1,11 +1,12 @@
+.form__wrap {
+  width: 260px;
+  margin: 0 auto;
+}
+
 .form {
   .default-nole;
   font: inherit;
   display: block;
-  width: 260px;
-  margin: 0 auto;
-}
-.form__wrap {
   width: 260px;
   margin: 0 auto;
 }
@@ -66,7 +67,7 @@
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   &--full-name,
   &--info  {
     padding-left: 0;
@@ -82,6 +83,10 @@
       line-height: 18px;
       border: none;
       border-bottom: 2px solid @text-gray;
+    }
+    & input[type="text"]:hover,
+    & input[type="text"]:focus {
+      border-bottom-color: @green-link;
     }
   }
   &--green{
@@ -114,9 +119,22 @@
       border-bottom: 2px solid @text-gray;
       padding-right: 40px;
       background: url("../img/mail.png") no-repeat 227px 16px;
+      &:hover {
+        background-image:  url("../img/mail-hover.png");
+      }
     }
     & input[type="tel"] {
-      background-image: url("../img/phone.png")
+      background-image: url("../img/phone.png");
+      &:hover {
+        background-image:  url("../img/phone-hover.png");
+      }
+    }
+    & input[type="tel"]:focus,
+    & input[type="email"]:focus,
+    & input[type="tel"]:hover,
+    & input[type="email"]:hover,{
+      /* color: @text-gray; */
+      border-bottom-color: @green-link;
     }
   }
 }
@@ -130,7 +148,6 @@
   height: 38px;
   border: 2px solid @text-gray;
 }
-
 
 
 .form__lable input[type="radio"] + .form__indicator {
@@ -192,17 +209,199 @@ textarea {
   padding: 18px 16px;
   border: none;
   border: 2px solid @text-gray;
+  &:hover,
+  &:focus {
+    border-color: @green-link;
+  }
 }
 
-.form__text {
+.form__mark {
   font-family: inherit;
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 33px;
 }
 
+@media (min-width: @tablet-width) {
+  .page-knitting{
+    position: relative;
+    .default-nole;
 
+    &::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    display: block;
+    width: 100%;
+    height: 18px;
+    background: url("../img/zigzag.svg") repeat-x 0 0;
+    z-index: 2;
+    }
+  }
 
+  .form__wrap {
+    width: 100%;
+    padding-top: 75px;
+  }
+  .form {
+    width: 100%;
+  }
+
+  .form__text {
+    width:668px;
+    font-size: 17px;
+    line-height: 30px;
+    padding-right: 50px;
+    margin: 0 auto;
+  }
+  .form__part {
+    width: 100%;
+    &--gray {
+      background-color: @bg-footer;
+    }
+  }
+  .form__wrap-block {
+    padding-top: 50px;
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+    &--phonemail {
+      display: block;
+    }
+  }
+
+  .form__title {
+    width: 167px;
+    &::before {
+      display: none;
+    }
+    & ~ div {
+      display: flex;
+      flex-wrap: wrap;
+      width: 501px;
+    }
+  }
+
+  .form__lable {
+    width: 335px;
+    font-size: 19px;
+    /* padding-top: 18px; */
+    padding-bottom: 18px;
+    &--short {
+      width: 240px;
+    }
+    &--full-name/* ,
+    &--info */  {
+      padding-left: 0;
+      width: 100%;
+      & input[type="text"] {
+        display: inline-block;
+        width: 377px;
+        margin-left: 20px;
+        padding-left: 15px;
+      }
+      & input[name="name"] {
+        width: 430px;
+      }
+    }
+    &--green{
+      width: 167px;
+      height: 77px;
+      display: block;
+      &::before {
+        display: none;
+      }
+      & input[type="tel"],
+      & input[type="email"]  {
+        margin-left: 167px;
+        margin-top: -35px;
+        padding-left: 18px;
+        width: 501px;
+        background-position: 447px 16px;
+      }
+    }
+  }
+
+  textarea {
+    width: 501px;
+    height: 140px;
+  }
+  .form__last-line {
+    width: 668px;
+    margin: 25px auto 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .form__mark {
+    width: 305px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__button {
+    width: 230px;
+    height: 50px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .form__text {
+    width:700px;
+  }
+  .form__wrap-block {
+    width:930px;
+  }
+  .form__title {
+    width: 116px;
+    & ~ div {
+      width: 814px;
+    }
+  }
+  .form__wrap-block--full-name .form__title {
+    padding-top: 25px;
+  }
+
+  .form__lable {
+    width: 525px;
+    &--short {
+      width: 260px;
+    }
+    &--full-name {
+      width: 100%;
+      & input[type="text"] {
+        width: 573px;
+      }
+      & input[name="name"] {
+        width: 627px;
+      }
+    }
+    &--green{
+      /* .default-nole; */
+      width: 116px;
+      height: 77px;
+      & input[type="tel"],
+      & input[type="email"] {
+        width: 700px;
+        margin-left: 116px;
+        background-position: 666px 16px;
+      }
+    }
+  }
+
+    textarea {
+    width: 701px;
+    height: 140px;
+  }
+
+  .form__last-line {
+    width: 700px;
+  }
+
+}
 
 
 
